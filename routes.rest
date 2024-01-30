@@ -1,0 +1,52 @@
+//LOCALHOST
+### Get users
+GET http://localhost:3000/users
+
+### Get user by ID
+GET http://localhost:3000/users/65abdf34db3a6f7875459c3f
+
+### Get contacts
+GET http://localhost:3000/contacts
+
+### Get contacts by ID
+GET http://localhost:3000/contacts/65b436a6557816dffefa0801
+
+### Add new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Brandy",
+    "lastName": "Clark",
+    "email": "brandy@gmail.com",
+    "favoriteColor": "lila",
+    "birthday": "2023-09-06"
+}
+
+### Update contact
+PUT http://localhost:3000/contacts/65b82bcd871e9f94dffe4c41
+Content-Type: application/json
+
+{
+    "firstName": "Elizabeth",
+    "lastName": "Clark",
+    "email": "beth@gmail.com",
+    "favoriteColor": "skyblue",
+    "birthday": "2003-06-07"
+}
+
+### DELETE contact
+DELETE http://localhost:3000/contacts/65b82bd6871e9f94dffe4c42
+
+//PRODUCTION
+### Get users from render 
+GET https://project1-7tuw.onrender.com/users
+
+### Get users by ID from render 
+GET https://project1-7tuw.onrender.com/users/65abdf34db3a6f7875459c3f
+
+### Get contacts from render
+GET https://project1-7tuw.onrender.com/contacts
+
+### Get contacts by ID from render
+GET https://project1-7tuw.onrender.com/contacts/65b436a6557816dffefa0801
