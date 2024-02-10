@@ -5,22 +5,33 @@ GET http://localhost:3000/users
 ### Get user by ID
 GET http://localhost:3000/users/65abdf34db3a6f7875459c3f
 
+
+### Post user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "email": "demk",
+    "name": "my name",
+    "ipaddress": "ahjfg"
+}
+
 ### Get contacts
 GET http://localhost:3000/contacts
 
 ### Get contacts by ID
-GET http://localhost:3000/contacts/65b436a6557816dffefa0801
+GET http://localhost:3000/contacts/65b436a6557816dffefa0804
 
 ### Add new contact
 POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Brandy",
-    "lastName": "Clark",
-    "email": "brandy@gmail.com",
-    "favoriteColor": "lila",
-    "birthday": "2023-09-06"
+    "firstName": "Nicole",
+    "lastName": "Scotts",
+    "email": "ms@gmail.com",
+    "favoriteColor": "blue",
+    "birthday": "345"
 }
 
 ### Update contact

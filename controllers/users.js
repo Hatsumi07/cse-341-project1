@@ -18,7 +18,25 @@ const getSingle = async (req, res) => {
     });
 };
 
+const createUser = async (req, res) => {
+    console.log("successful validation:", req.body);
+    const user = {
+      email: req.body.email,
+      username: req.body.username,
+      name: req.body.name,
+      ipaddress: req.body.ipaddress
+    };
+    const response = await mongodb.getDatabase().db().collection("users").insertOne(user);
+    console.log(response);
+    if (response.acknowledged) {
+      res.status(204).send();
+    } else {
+        res.status(500).json(res.locals.response.error || "Some error ocurres while updating the user.");
+    }
+};
+
 module.exports = {
     getAll,
-    getSingle
+    getSingle,
+    createUser
 };
